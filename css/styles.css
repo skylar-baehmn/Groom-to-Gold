@@ -1,0 +1,371 @@
+/* Skylar Bachman, CIS 118-final */
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+}
+
+/* Style rules for the home page element */
+/* Includes hero image and nav element */
+.fixed-background {
+    background-size: auto 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../Images/grooming_background.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.fixed-background h1, .fixed-background p {
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000; /* this adds a black outline to the text to make it more readable */
+    text-align: center;
+}
+
+.fixed-background h1 {
+    font-size: 7vw;
+}
+
+.fixed-background p {
+    font-size: 3.5vw;
+}
+
+#home-page-header {
+    --background-image: url('../Images/dog_grooming_bath.jpg');
+    height: 100vh;
+    width: 100%;
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)), 
+      var(--background-image) fixed no-repeat center / cover;
+    color: #fff9ff;
+    transition: 1s;
+    opacity: 1;
+}
+
+/* Style rules for the nav links */
+nav {
+    display: flex;
+    padding: 30px 50px 75px 100px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+}
+
+nav img {
+    width: 5vw;
+    position: absolute;
+    top: 30px;
+    left: 60px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #FFDD41;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #FFDD41;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.hero-text-1 {
+    width: 90%;
+    color: #FFDD41;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text-1 h1{
+    font-size: 8vw;
+}
+
+.hero-text-1 p{
+    font-size: 4vw;
+    font-style: italic;
+}
+
+.button {
+    background-color: #15878f;
+    color: #FFDD41;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 30px;
+    min-width: 120px;
+}
+
+.button:hover {
+    background-color: #FFDD41;
+    color: #15878f;
+}
+
+/* Style rules for the contact page */
+.contact-page {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../Images/dog_grooming_banner_3.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.contact-text {
+    text-align: center;
+    text-decoration: none;
+    color: #FFDD41;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000;
+}
+
+.contact-text h2 {
+    font-size: 6vw;
+}
+
+.contact-text p {
+    font-size: 2vw;
+}
+
+.contact-text .link {
+    color: #FFDD41;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+footer a {
+    color: #FFDD41;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000;
+    text-decoration: none;
+}
+
+/* Style rules for pricing sheet */
+* {
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.pricing-sheet {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../Images/dog_grooming_banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.pricing {
+    float: left;
+    width: 100%;
+    padding: 8px;
+}
+
+.price {
+    list-style-type: none;
+    border: 2px solid #052529;
+    margin: 0;
+    padding: 0;
+}
+  
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: #127f8d;
+    color: #FFDD41;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #0a454d;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .subheader {
+    background-color: #0a454d;
+    color: #FFDD41;
+    font-size: 20px;
+}
+
+.price .pricing-service {
+    background-color: #052529;
+    color: #FFDD41;
+}
+
+/* Style rules for the gallery */
+.gallery {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gallery nav {
+    background-color: #000;
+}
+
+.gallery-scroll {
+    height: 100%;
+    line-height: 1.5;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+.fixed-gallery {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-scroll-text {
+    background-color: #000;
+    padding: 10px 10px;
+    color: #FFDD41;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-1 {
+    background-image: url("../Images/dog-groomer1.jpg");
+}
+
+.bg-2 {
+    background-image: url("../Images/dog-groomer2.jpg");
+}
+
+.bg-3 {
+    background-image: url("../Images/dog-groomer3.jpg");
+}
+
+/* Style rule for cool FAQ section */
+.faqs {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../Images/dog_grooming_banner_2.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.faq-header{
+    font-size: 50px;
+    border-bottom: 1px dotted #FFDD41;
+    padding: 20px;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000;
+    text-align: center;
+}
+  
+.faq-content {
+    margin: 0;
+}
+  
+.faq-question {
+    padding: 20px;
+    border-bottom: 1px dotted #FFDD41;
+}
+  
+.panel-title {
+    font-size: 24px;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 10px 10px 0 48px;
+    display: block;
+    cursor: pointer;
+    color: #FFDD41;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000;
+}
+
+.panel {
+    display: none;
+}
+  
+.panel-content {
+    display: none;
+    padding: 5px;
+    color: #FFDD41;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000;
+}
+
+#q1:checked ~ .panel-content{
+    display: block;
+}
+
+#q2:checked ~ .panel-content{
+    display: block;
+}
+
+#q3:checked ~ .panel-content{
+    display: block;
+}
+  
+.plus {
+    position: absolute;
+    margin-left: 20px;
+    color: #FFDD41;
+}
+
+/* Media query for desktop */
+@media screen and (min-width: 1000px), print {
+    .pricing {
+        width: 33.3%;
+    }
+}

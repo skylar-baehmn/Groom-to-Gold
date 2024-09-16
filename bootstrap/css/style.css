@@ -1,0 +1,12 @@
+/* I am not sure if I need to do a reset whith bootstrap */
+
+.rounded {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%px;
+}
+
+.rounded img {
+    width: 100%;
+    height: auto;
+}
